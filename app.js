@@ -9,6 +9,7 @@ dbconnection();
 
 
 const userRoutes = require('./api/routes/user');
+const requestRoutes = require('./api/routes/request');
 
 
 
@@ -34,6 +35,7 @@ app.use(express.static("upload"));
 
 
 app.use("/", userRoutes);
+app.use('/request',requestRoutes);
 
 
 app.use((req, res, next) => {
